@@ -1,13 +1,12 @@
-class Api::V1::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < Api::V1::BaseController
 
   def show
     @articles = Article.find(params[:id])
-    json_response(@articles)
+    respond_with @articles
   end
 
   def index
-    @articles = Article.all
-    json_response(@articles)
+    respond_with Article.all
   end
 
   def create
