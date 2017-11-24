@@ -45,7 +45,7 @@ var Article = React.createClass({
                 {author}
                 {description}
                 {tags}
-                <button className='saveChanges' onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+                <button className='saveChanges' onClick={this.handleEdit}> {this.state.editable ? 'Save' : 'Edit' } </button>
                 {deleteOrCancel}
             </div>
         )

@@ -19,9 +19,9 @@ var AllArticles = React.createClass({
             });
 
         return(
-            <div>
+            <span className="allArticles">
                 {articles}
-            </div>
+            </span>
         )
     }
 });
