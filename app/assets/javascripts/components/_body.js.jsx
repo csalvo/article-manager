@@ -63,7 +63,7 @@ getInitialState() {
   
     render() {
         return (
-            <div>
+            <div className='container'>
                 <NewArticle handleSubmit={this.handleSubmit}/>
                 <AllArticles  articles={this.state.articles}  handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
             </div>

@@ -19,14 +19,19 @@ var NewArticle = React.createClass({
     },
     render() {
         return (
-                <div>
+        <div className = "newArticleContainer">
+                <div className="addArticle">
                     <input ref='title' placeholder='Enter the title of the article' />
-                    <input ref='description' placeholder='Enter the article text' />
+                    <br/>
+                    <input className='desc' ref='description' placeholder='Enter the article text' />
+                    <br/>
                     <input ref='author' placeholder='Enter the name of the author' />
+                    <br/>
                     <input ref='tags' placeholder='Enter tags for the article' />
-                    <button onClick={this.handleClick}>Submit</button>
+                    <br/>
+                    <button className='submitArticle' onClick={this.handleClick}>Submit</button>
                 </div>
-
+            </div>
         )
     }
 });

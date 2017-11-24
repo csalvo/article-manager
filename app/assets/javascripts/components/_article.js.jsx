@@ -14,6 +14,9 @@ var Article = React.createClass({
         }
         this.setState({ editable: !this.state.editable })
     },
+    handleCancel(){
+        this.setState({ editable: !this.state.editable })
+    },
 
     render() {
         var name = this.state.editable ? 
@@ -31,14 +34,19 @@ var Article = React.createClass({
         var description = this.state.editable ? 
                     <input type='text' ref='description' defaultValue={this.props.article.description} /> : 
                     <p>{this.props.article.description}</p>;
+        
+        var deleteOrCancel = this.state.editable ?
+                    <button className='cancel' onClick={this.handleCancel}>Cancel</button> :
+                    <button className='delete' onClick={this.props.handleDelete}>Delete</button>
+
         return (
-            <div>
+            <div className='singleArticle'>
                 {name}
                 {author}
                 {description}
                 {tags}
-                <button onClick={this.props.handleDelete}>Delete</button>
-                <button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+                <button className='saveChanges' onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+                {deleteOrCancel}
             </div>
         )
     }

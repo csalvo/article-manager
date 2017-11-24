@@ -1,7 +1,7 @@
 var Header = React.createClass({
     render() {
         return (
-            <div>
+            <div className = "header">
                 <h1>Article Manager</h1>
             </div>
         )
