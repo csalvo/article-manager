@@ -25,11 +25,11 @@ var Article = React.createClass({
 
         var author = this.state.editable ? 
                     <input type='text' ref='author' defaultValue={this.props.article.author} /> : 
-                    <p>By: {this.props.article.author}</p>;
+                    <p><b>Author:</b> {this.props.article.author}</p>;
 
         var tags = this.state.editable ? 
                     <input type='text' ref='tags' defaultValue={this.props.article.tags} /> : 
-                    <p>Tags: {this.props.article.tags}</p>;
+                    <p><b>Tags:</b> {this.props.article.tags}</p>;
 
         var description = this.state.editable ? 
                     <input type='text' ref='description' defaultValue={this.props.article.description} /> : 
@@ -45,6 +45,8 @@ var Article = React.createClass({
                 {author}
                 {description}
                 {tags}
+                <p><b>Created at:</b> {this.props.article.created_at.substring(0,10)}</p>
+                <p><b>Updated at:</b> {this.props.article.updated_at.substring(0,10)}</p>
                 <button className='saveChanges' onClick={this.handleEdit}> {this.state.editable ? 'Save' : 'Edit' } </button>
                 {deleteOrCancel}
             </div>
