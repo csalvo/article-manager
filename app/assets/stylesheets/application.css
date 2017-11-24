@@ -74,4 +74,10 @@ textArea {
 	float: right;
 	padding: 5px;
 	margin: 5px;
- }
+ } 
+
+.title {
+	margin-left: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
+}

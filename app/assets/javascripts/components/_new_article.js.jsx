@@ -31,6 +31,7 @@ var NewArticle = React.createClass({
         return (
         <div className = "newArticleContainer">
                 <div className="addArticle">
+                    <h3>Add an Article</h3>
                     <input ref='title' placeholder='Enter the title of the article' />
                     <br/>
                     <textArea className='desc' ref='description' placeholder='Enter the article text' />

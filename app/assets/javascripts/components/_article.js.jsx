@@ -45,8 +45,6 @@ var Article = React.createClass({
                 {author}
                 {description}
                 {tags}
-                <p><b>Created at:</b> {this.props.article.created_at.substring(0,10)}</p>
-                <p><b>Updated at:</b> {this.props.article.updated_at.substring(0,10)}</p>
                 <button className='saveChanges' onClick={this.handleEdit}> {this.state.editable ? 'Save' : 'Edit' } </button>
                 {deleteOrCancel}
             </div>
